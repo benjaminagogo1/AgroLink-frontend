@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketplace | AgroLink</title>
+    <title>Marketplace | Agro-Shield</title>
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/marketplace.css">
 </head>
-
 <body>
 
-<header>
+<header class="navbar">
 
-    <h1>Agro-Shield</h1>
+    <div class="logo">🌾 Agro-Shield</div>
 
     <nav>
         <a href="dashboard.html">Dashboard</a>
@@ -26,38 +25,70 @@
 
 </header>
 
-<main>
+<main class="marketplace">
 
-    <h2>Marketplace</h2>
-    <p>Buy and sell agricultural products.</p>
+    <div class="market-header">
+
+        <div>
+            <h1>Marketplace</h1>
+            <p>Buy and sell agricultural products.</p>
+        </div>
+
+        <button>Sell Produce</button>
+
+    </div>
 
     <input
         type="search"
         placeholder="Search products..."
+        class="search-box"
     >
 
-    <button>Add Product</button>
+    <section class="product-grid">
 
-    <table>
+        <div class="product-card">
 
-        <thead>
+            <img src="../assets/images/maize.jpg" alt="Maize">
 
-            <tr>
-                <th>Product</th>
-                <th>Category</th>
-                <th>Price</th>
-                <th>Seller</th>
-                <th>Contact</th>
-                <th>Action</th>
-            </tr>
+            <h3>Maize</h3>
 
-        </thead>
+            <p class="price">₦65,000 / Bag</p>
 
-        <tbody>
+            <p>Seller: Joseph Farms</p>
 
-        </tbody>
+            <button>View Details</button>
 
-    </table>
+        </div>
+
+        <div class="product-card">
+
+            <img src="../assets/images/rice.jpg" alt="Rice">
+
+            <h3>Rice</h3>
+
+            <p class="price">₦82,000 / Bag</p>
+
+            <p>Seller: Benue Agro Ltd</p>
+
+            <button>View Details</button>
+
+        </div>
+
+        <div class="product-card">
+
+            <img src="../assets/images/soybeans.jpg" alt="Soybeans">
+
+            <h3>Soybeans</h3>
+
+            <p class="price">₦97,000 / Bag</p>
+
+            <p>Seller: Green Harvest</p>
+
+            <button>View Details</button>
+
+        </div>
+
+    </section>
 
 </main>
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile | AgroLink</title>
+    <title>Profile | Agro-Shield</title>
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/profile.css">
@@ -11,9 +11,9 @@
 
 <body>
 
-<header>
+<header class="navbar">
 
-    <h1>Agro-Shield</h1>
+    <div class="logo">🌾 Agro-Shield</div>
 
     <nav>
         <a href="dashboard.html">Dashboard</a>
@@ -26,66 +26,72 @@
 
 </header>
 
-<main>
+<main class="profile">
 
-    <h2>My Profile</h2>
+    <div class="profile-header">
 
-    <img
-        src="../assets/images/profile.png"
-        alt="Profile Picture"
-        width="150"
-    >
+        <img src="../assets/images/profile.jpg" alt="Profile Photo">
 
-    <table>
+        <div>
 
-        <tr>
-            <th>First Name</th>
-            <td></td>
-        </tr>
+            <h1>Benjamin Agogo</h1>
 
-        <tr>
-            <th>Last Name</th>
-            <td></td>
-        </tr>
+            <p>Farmer • Benue State, Nigeria</p>
 
-        <tr>
-            <th>Email</th>
-            <td></td>
-        </tr>
+            <button>Edit Profile</button>
 
-        <tr>
-            <th>Phone Number</th>
-            <td></td>
-        </tr>
+        </div>
 
-        <tr>
-            <th>State</th>
-            <td></td>
-        </tr>
+    </div>
 
-        <tr>
-            <th>LGA</th>
-            <td></td>
-        </tr>
+    <section class="profile-grid">
 
-        <tr>
-            <th>Community</th>
-            <td></td>
-        </tr>
+        <div class="card">
 
-        <tr>
-            <th>Farm Size</th>
-            <td></td>
-        </tr>
+            <h2>Personal Information</h2>
 
-        <tr>
-            <th>Main Crop</th>
-            <td></td>
-        </tr>
+            <p><strong>Email:</strong> benjamin@example.com</p>
+            <p><strong>Phone:</strong> +234 800 000 0000</p>
+            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Date of Birth:</strong> 12 Jan 1998</p>
 
-    </table>
+        </div>
 
-    <button>Edit Profile</button>
+        <div class="card">
+
+            <h2>Farm Information</h2>
+
+            <p><strong>Farm Name:</strong> Green Harvest Farm</p>
+            <p><strong>Farm Size:</strong> 12 Hectares</p>
+            <p><strong>Main Crop:</strong> Maize</p>
+            <p><strong>Location:</strong> Otukpo, Benue</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Account Statistics</h2>
+
+            <p><strong>Products:</strong> 34</p>
+            <p><strong>Sales:</strong> 120</p>
+            <p><strong>AI Analyses:</strong> 18</p>
+            <p><strong>Member Since:</strong> July 2026</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Security</h2>
+
+            <button>Change Password</button>
+
+            <button>Update Phone</button>
+
+            <button>Delete Account</button>
+
+        </div>
+
+    </section>
 
 </main>
 
