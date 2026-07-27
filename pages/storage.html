@@ -20,28 +20,28 @@
         <a href="marketplace.html">Marketplace</a>
         <a href="ai-assistant.html">AI Assistant</a>
         <a href="profile.html">Profile</a>
-        <a href="login.html">Logout</a>
     </nav>
 
 </header>
 
 <main class="storage">
 
-    <div class="storage-header">
+    <div class="page-header">
 
         <div>
             <h1>Storage Management</h1>
-            <p>Monitor all produce currently in storage.</p>
+            <p>Manage all produce currently stored.</p>
         </div>
 
-        <button>Add Produce</button>
+        <button id="add-btn">+ Add Produce</button>
 
     </div>
 
-    <div class="storage-search">
+    <div class="toolbar">
 
         <input
             type="search"
+            id="search"
             placeholder="Search produce..."
         >
 
@@ -56,40 +56,76 @@
                 <th>Quantity</th>
                 <th>Unit</th>
                 <th>Location</th>
-                <th>Date Stored</th>
-                <th>Status</th>
-                <th>Action</th>
+                <th>Actions</th>
             </tr>
 
         </thead>
 
-        <tbody>
-
-            <tr>
-                <td>Maize</td>
-                <td>120</td>
-                <td>Bags</td>
-                <td>Warehouse A</td>
-                <td>12 Jul 2026</td>
-                <td>Available</td>
-                <td>Edit | Delete</td>
-            </tr>
-
-            <tr>
-                <td>Rice</td>
-                <td>80</td>
-                <td>Bags</td>
-                <td>Warehouse B</td>
-                <td>20 Jul 2026</td>
-                <td>Available</td>
-                <td>Edit | Delete</td>
-            </tr>
+        <tbody id="storage-body">
 
         </tbody>
 
     </table>
 
 </main>
+
+<div class="modal" id="modal">
+
+    <div class="modal-content">
+
+        <h2>Add Produce</h2>
+
+        <form id="storage-form">
+
+            <input
+                type="text"
+                id="produce"
+                placeholder="Produce Name"
+                required
+            >
+
+            <input
+                type="number"
+                id="quantity"
+                placeholder="Quantity"
+                required
+            >
+
+            <select id="unit">
+
+                <option>Bags</option>
+                <option>Kg</option>
+                <option>Tonnes</option>
+
+            </select>
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Storage Location"
+                required
+            >
+
+            <div class="buttons">
+
+                <button type="submit">
+                    Save
+                </button>
+
+                <button
+                    type="button"
+                    id="close-btn"
+                >
+                    Cancel
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
 
 <script src="../js/storage.js"></script>
 

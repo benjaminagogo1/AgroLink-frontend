@@ -20,73 +20,49 @@
         <a href="marketplace.html">Marketplace</a>
         <a href="ai-assistant.html">AI Assistant</a>
         <a href="profile.html">Profile</a>
-        <a href="login.html">Logout</a>
     </nav>
 
 </header>
 
 <main class="marketplace">
 
-    <div class="market-header">
+    <div class="page-header">
 
         <div>
+
             <h1>Marketplace</h1>
-            <p>Buy and sell agricultural products.</p>
+
+            <p>Buy and sell agricultural produce.</p>
+
         </div>
 
-        <button>Sell Produce</button>
+        <button>+ Sell Produce</button>
 
     </div>
 
-    <input
-        type="search"
-        placeholder="Search products..."
-        class="search-box"
+    <div class="toolbar">
+
+        <input
+            type="search"
+            id="search"
+            placeholder="Search produce..."
+        >
+
+        <select id="category">
+
+            <option value="all">All Categories</option>
+            <option value="Grains">Grains</option>
+            <option value="Tubers">Tubers</option>
+            <option value="Vegetables">Vegetables</option>
+
+        </select>
+
+    </div>
+
+    <section
+        class="products"
+        id="products"
     >
-
-    <section class="product-grid">
-
-        <div class="product-card">
-
-            <img src="../assets/images/maize.jpg" alt="Maize">
-
-            <h3>Maize</h3>
-
-            <p class="price">₦65,000 / Bag</p>
-
-            <p>Seller: Joseph Farms</p>
-
-            <button>View Details</button>
-
-        </div>
-
-        <div class="product-card">
-
-            <img src="../assets/images/rice.jpg" alt="Rice">
-
-            <h3>Rice</h3>
-
-            <p class="price">₦82,000 / Bag</p>
-
-            <p>Seller: Benue Agro Ltd</p>
-
-            <button>View Details</button>
-
-        </div>
-
-        <div class="product-card">
-
-            <img src="../assets/images/soybeans.jpg" alt="Soybeans">
-
-            <h3>Soybeans</h3>
-
-            <p class="price">₦97,000 / Bag</p>
-
-            <p>Seller: Green Harvest</p>
-
-            <button>View Details</button>
-
-        </div>
 
     </section>
 
