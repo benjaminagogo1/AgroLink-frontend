@@ -87,3 +87,28 @@ form p{
     margin-top:25px;
     text-align:center;
 }
+
+
+.message{
+    margin-top:20px;
+    font-weight:bold;
+}
+
+.password-strength{
+    display:block;
+    margin-top:8px;
+    font-weight:bold;
+}
+
+.toggle-password{
+    display:block;
+    margin-top:8px;
+    color:green;
+    cursor:pointer;
+    user-select:none;
+}
+
+button:disabled{
+    opacity:.7;
+    cursor:not-allowed;
+}
