@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Storage | AgroLink</title>
+    <title>Storage | Agro-Shield</title>
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/storage.css">
 </head>
 <body>
 
-<header>
-    <h1>Agro-Shield</h1>
+<header class="navbar">
+
+    <div class="logo">🌾 Agro-Shield</div>
 
     <nav>
         <a href="dashboard.html">Dashboard</a>
@@ -19,30 +20,70 @@
         <a href="marketplace.html">Marketplace</a>
         <a href="ai-assistant.html">AI Assistant</a>
         <a href="profile.html">Profile</a>
+        <a href="login.html">Logout</a>
     </nav>
+
 </header>
 
-<main>
+<main class="storage">
 
-    <h2>Storage Management</h2>
+    <div class="storage-header">
 
-    <button id="add-produce">
-        Add Produce
-    </button>
+        <div>
+            <h1>Storage Management</h1>
+            <p>Monitor all produce currently in storage.</p>
+        </div>
+
+        <button>Add Produce</button>
+
+    </div>
+
+    <div class="storage-search">
+
+        <input
+            type="search"
+            placeholder="Search produce..."
+        >
+
+    </div>
 
     <table>
 
         <thead>
+
             <tr>
                 <th>Produce</th>
                 <th>Quantity</th>
                 <th>Unit</th>
+                <th>Location</th>
                 <th>Date Stored</th>
-                <th>Actions</th>
+                <th>Status</th>
+                <th>Action</th>
             </tr>
+
         </thead>
 
-        <tbody id="storage-table">
+        <tbody>
+
+            <tr>
+                <td>Maize</td>
+                <td>120</td>
+                <td>Bags</td>
+                <td>Warehouse A</td>
+                <td>12 Jul 2026</td>
+                <td>Available</td>
+                <td>Edit | Delete</td>
+            </tr>
+
+            <tr>
+                <td>Rice</td>
+                <td>80</td>
+                <td>Bags</td>
+                <td>Warehouse B</td>
+                <td>20 Jul 2026</td>
+                <td>Available</td>
+                <td>Edit | Delete</td>
+            </tr>
 
         </tbody>
 
