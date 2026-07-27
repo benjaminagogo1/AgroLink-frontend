@@ -13,7 +13,88 @@
     margin: 0 auto 40px;
     line-height: 1.6;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    color: black;
+}
+
+header {
+    background-color: green;
+    color: white;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid lightgray;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: green;
+    color: white;
+}
 .hero-buttons {
     display: flex;
     justify-content: center;
