@@ -1,0 +1,18 @@
+.ai-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#preview-image {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+#analysis-result {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
