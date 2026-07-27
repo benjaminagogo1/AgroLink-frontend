@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/dashboard.css">
 </head>
-
 <body>
 
-<header>
+<header class="navbar">
 
-    <h1>Agro-Shield</h1>
+    <div class="logo">🌾 Agro-Shield</div>
 
     <nav>
         <a href="dashboard.html">Dashboard</a>
@@ -26,29 +25,69 @@
 
 </header>
 
-<main>
+<main class="dashboard">
 
-    <h2>Welcome, Benjamin!</h2>
-    <p>Manage your farm from one place.</p>
+    <section class="welcome">
 
-    <section class="cards">
+        <h1>Welcome Back, Benjamin 👋</h1>
+        <p>Monitor your farm operations from one place.</p>
 
-        <div class="card">
-            <h3>Storage</h3>
-            <p>Monitor your stored produce.</p>
-            <a href="storage.html">Open</a>
+    </section>
+
+    <section class="stats">
+
+        <div class="stat-card">
+            <h3>Produce in Storage</h3>
+            <h2>127</h2>
+            <p>Items Available</p>
         </div>
 
-        <div class="card">
-            <h3>Marketplace</h3>
-            <p>Buy and sell agricultural products.</p>
-            <a href="marketplace.html">Open</a>
+        <div class="stat-card">
+            <h3>Marketplace Listings</h3>
+            <h2>18</h2>
+            <p>Active Listings</p>
         </div>
 
-        <div class="card">
-            <h3>AI Assistant</h3>
-            <p>Analyze crops and receive recommendations.</p>
-            <a href="ai-assistant.html">Open</a>
+        <div class="stat-card">
+            <h3>AI Diagnoses</h3>
+            <h2>12</h2>
+            <p>This Month</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Revenue</h3>
+            <h2>₦425,000</h2>
+            <p>Total Sales</p>
+        </div>
+
+    </section>
+
+    <section class="quick-actions">
+
+        <h2>Quick Actions</h2>
+
+        <div class="actions">
+
+            <a href="storage.html" class="action-card">
+                <h3>📦 Storage</h3>
+                <p>Manage stored produce</p>
+            </a>
+
+            <a href="marketplace.html" class="action-card">
+                <h3>🛒 Marketplace</h3>
+                <p>Buy and sell produce</p>
+            </a>
+
+            <a href="ai-assistant.html" class="action-card">
+                <h3>🤖 AI Assistant</h3>
+                <p>Analyze crop images</p>
+            </a>
+
+            <a href="profile.html" class="action-card">
+                <h3>👤 Profile</h3>
+                <p>Manage your account</p>
+            </a>
+
         </div>
 
     </section>
