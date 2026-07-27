@@ -1,54 +1,76 @@
-body {
-    background-color: whitesmoke;
+.auth-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    min-height:100vh;
 }
 
-.register-container {
-    background-color: white;
+.auth-left{
+    background:green;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:80px;
 }
 
-h1 {
-    color: green;
+.auth-left h1{
+    font-size:60px;
+    margin-bottom:20px;
 }
 
-button {
-    background-color: green;
-    color: white;
+.auth-left p{
+    font-size:22px;
+    line-height:1.7;
 }
 
-button:hover {
-    background-color: darkgreen;
+.auth-right{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:white;
 }
 
-a {
-    color: green;
+form{
+    width:420px;
 }
 
-#error-message {
-    color: red;
-    font-size: 14px;
-    margin: 15px 0;
-    text-align: center;
+form h2{
+    margin-bottom:30px;
+    font-size:36px;
 }
 
-.terms {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+label{
+    display:block;
+    margin-top:20px;
+    margin-bottom:8px;
+    font-weight:bold;
 }
 
-.terms input {
-    width: auto;
-    margin-top: 3px;
+input{
+    width:100%;
+    padding:15px;
+    border:1px solid lightgray;
+    border-radius:8px;
+    font-size:16px;
 }
 
-.terms label {
-    font-weight: normal;
-    margin: 0;
+button{
+    width:100%;
+    margin-top:30px;
+    padding:16px;
+    font-size:18px;
+    border:none;
+    border-radius:8px;
+    background:green;
+    color:white;
+    cursor:pointer;
 }
 
-.login-link {
-    margin-top: 20px;
-    text-align: center;
+button:hover{
+    background:darkgreen;
+}
+
+form p{
+    margin-top:25px;
+    text-align:center;
 }
