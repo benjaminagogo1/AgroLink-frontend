@@ -93,3 +93,22 @@ button:disabled{
     opacity:.7;
     cursor:not-allowed;
 }
+
+.left-side{
+
+    position:relative;
+
+    background:
+        linear-gradient(
+            rgba(0,100,0,.82),
+            rgba(0,100,0,.82)
+        ),
+        url("../assets/images/login-image1.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    transition:background-image .8s ease-in-out;
+
+}

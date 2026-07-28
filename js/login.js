@@ -50,3 +50,41 @@ loginForm.addEventListener("submit", function (event) {
         window.location.href = "dashboard.html";
     }, 1500);
 });
+
+
+
+const loginImages = [
+
+    "../assets/images/un.jpeg",
+    "../assets/images/login-image6.jpeg",
+    "../assets/images/login-image7.jpeg",
+    "../assets/images/login-image8.jpeg",
+    "../assets/images/login-image9.jpeg"
+
+];
+
+const leftPanel = document.querySelector(".left-side");
+
+let current = 0;
+
+function changeBackground(){
+
+    current++;
+
+    if(current >= loginImages.length){
+
+        current = 0;
+
+    }
+
+    leftPanel.style.backgroundImage = `
+        linear-gradient(
+            rgba(0,100,0,.82),
+            rgba(0,100,0,.82)
+        ),
+        url('${loginImages[current]}')
+    `;
+
+}
+
+setInterval(changeBackground,4000);

@@ -107,3 +107,41 @@ registerForm.addEventListener("submit", function (event) {
     }, 1500);
 
 });
+
+
+
+const registerImages = [
+
+    "../assets/images/login-image1.jpeg",
+    "../assets/images/login-image2.jpeg",
+    "../assets/images/login-image3.jpeg",
+    "../assets/images/login-image4.jpeg",
+    "../assets/images/login-image5.jpeg"
+
+];
+
+const leftPanel = document.querySelector(".left-side");
+
+let current = 0;
+
+function changeBackground(){
+
+    current++;
+
+    if(current >= registerImages.length){
+
+        current = 0;
+
+    }
+
+    leftPanel.style.backgroundImage = `
+        linear-gradient(
+            rgba(0,100,0,.82),
+            rgba(0,100,0,.82)
+        ),
+        url('${registerImages[current]}')
+    `;
+
+}
+
+setInterval(changeBackground,4000);
