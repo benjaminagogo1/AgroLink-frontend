@@ -100,9 +100,23 @@ nav a:hover{
 }
 
 .hero-image{
-    width:45%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .hero-image img{
+
     width:100%;
+    max-width:600px;
+    height:500px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    opacity:1;
+
+    transition:opacity .8s ease-in-out;
+
 }
