@@ -1,9 +1,16 @@
 const images = [
 
-    "assets/images/farmer1.jpg",
-    "assets/images/farmer2.jpg",
-    "assets/images/farmer3.jpg",
-    "assets/images/farmer4.jpg"
+    "assets/images/Farmer1.jpeg",
+    "assets/images/Farmer2.jpeg",
+    "assets/images/Farmer3.jpeg",
+    "assets/images/Farmer4.jpeg",
+    "assets/images/Farmer5.jpeg",
+    "assets/images/Farmer5.jpeg",
+    "assets/images/Farmer6.jpeg",
+    "assets/images/Farmer7.jpeg",
+    "assets/images/Farmer8.jpeg",
+    "assets/images/Farmer9.jpeg",
+    "assets/images/Farmer10.jpeg"
 
 ];
 
