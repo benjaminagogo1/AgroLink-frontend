@@ -10,124 +10,245 @@
 </head>
 <body>
 
-<header class="navbar">
+    <!-- Navigation -->
+    <header class="navbar">
 
-    <div class="logo">🌾 Agro-Shield</div>
-
-    <nav>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="storage.html">Storage</a>
-        <a href="marketplace.html">Marketplace</a>
-        <a href="ai-assistant.html">AI Assistant</a>
-        <a href="profile.html">Profile</a>
-    </nav>
-
-</header>
-
-<main class="storage">
-
-    <div class="page-header">
-
-        <div>
-            <h1>Storage Management</h1>
-            <p>Manage all produce currently stored.</p>
+        <div class="logo">
+            🌾 Agro-Shield
         </div>
 
-        <button id="add-btn">+ Add Produce</button>
+        <nav>
 
-    </div>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="storage.html" class="active">Storage</a>
+            <a href="marketplace.html">Marketplace</a>
+            <a href="ai-assistant.html">AI Assistant</a>
+            <a href="profile.html">Profile</a>
+            <a href="../index.html">Logout</a>
 
-    <div class="toolbar">
+        </nav>
 
-        <input
-            type="search"
-            id="search"
-            placeholder="Search produce..."
-        >
+    </header>
 
-    </div>
+    <!-- Main -->
 
-    <table>
+    <main class="storage">
 
-        <thead>
+        <!-- Header -->
 
-            <tr>
-                <th>Produce</th>
-                <th>Quantity</th>
-                <th>Unit</th>
-                <th>Location</th>
-                <th>Actions</th>
-            </tr>
+        <section class="storage-header">
 
-        </thead>
+            <div>
 
-        <tbody id="storage-body">
+                <h1>Storage Management</h1>
 
-        </tbody>
-
-    </table>
-
-</main>
-
-<div class="modal" id="modal">
-
-    <div class="modal-content">
-
-        <h2>Add Produce</h2>
-
-        <form id="storage-form">
-
-            <input
-                type="text"
-                id="produce"
-                placeholder="Produce Name"
-                required
-            >
-
-            <input
-                type="number"
-                id="quantity"
-                placeholder="Quantity"
-                required
-            >
-
-            <select id="unit">
-
-                <option>Bags</option>
-                <option>Kg</option>
-                <option>Tonnes</option>
-
-            </select>
-
-            <input
-                type="text"
-                id="location"
-                placeholder="Storage Location"
-                required
-            >
-
-            <div class="buttons">
-
-                <button type="submit">
-                    Save
-                </button>
-
-                <button
-                    type="button"
-                    id="close-btn"
-                >
-                    Cancel
-                </button>
+                <p>
+                    Monitor and manage all produce stored on your farm.
+                </p>
 
             </div>
 
-        </form>
+            <button id="addProduceBtn" class="primary-btn">
+
+                + Add Produce
+
+            </button>
+
+        </section>
+
+        <!-- Search -->
+
+        <section class="storage-search">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search produce..."
+            >
+
+        </section>
+
+        <!-- Table -->
+
+        <section class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Produce</th>
+                        <th>Quantity</th>
+                        <th>Unit</th>
+                        <th>Location</th>
+                        <th>Date Stored</th>
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="storageTable">
+
+                </tbody>
+
+            </table>
+
+            <div
+                id="emptyState"
+                class="empty-state"
+            >
+
+                No produce has been added yet.
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Modal -->
+
+    <div
+        id="modal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2 id="modalTitle">
+
+                    Add Produce
+
+                </h2>
+
+                <span id="closeModal">
+
+                    &times;
+
+                </span>
+
+            </div>
+
+            <form id="produceForm">
+
+                <div class="form-group">
+
+                    <label>
+
+                        Produce Name
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="produceName"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        Quantity
+
+                    </label>
+
+                    <input
+                        type="number"
+                        id="produceQuantity"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        Unit
+
+                    </label>
+
+                    <select id="produceUnit">
+
+                        <option>Bags</option>
+                        <option>Kg</option>
+                        <option>Tonnes</option>
+                        <option>Crates</option>
+                        <option>Tubers</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        Storage Location
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="produceLocation"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        Date Stored
+
+                    </label>
+
+                    <input
+                        type="date"
+                        id="produceDate"
+                        required
+                    >
+
+                </div>
+
+                <div class="modal-buttons">
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="cancelBtn"
+                    >
+
+                        Cancel
+
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+
+                        Save Produce
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
 
     </div>
 
-</div>
-
-<script src="../js/storage.js"></script>
+    <script src="../js/storage.js"></script>
 
 </body>
 </html>
