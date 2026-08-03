@@ -133,7 +133,6 @@ input:focus{
     border-color:green;
 
 }
-
 .password-wrapper{
 
     position:relative;
@@ -142,32 +141,34 @@ input:focus{
 
 .password-wrapper input{
 
-    padding-right:80px;
+    width:100%;
+
+    padding-right:90px;
 
 }
+
 
 .toggle-password{
 
     position:absolute;
 
-    top:50%;
-    right:15px;
+    top:16px;
 
-    transform:translateY(-50%);
+    right:15px;
 
     background:green;
 
     color:white;
 
-    padding:5px 12px;
+    padding:4px 10px;
 
     border-radius:20px;
 
-    cursor:pointer;
-
-    font-size:13px;
+    font-size:12px;
 
     font-weight:bold;
+
+    cursor:pointer;
 
     user-select:none;
 
@@ -222,5 +223,19 @@ form p{
     margin-top:20px;
 
     font-weight:bold;
+
+}
+
+.field-error{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:red;
+
+    font-size:13px;
+
+    font-weight:500;
 
 }

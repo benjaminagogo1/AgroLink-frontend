@@ -5,46 +5,51 @@ const password = document.getElementById("password");
 
 const button = loginForm.querySelector("button");
 
-// Message
+const passwordWrapper = document.querySelector(".password-wrapper");
 
-const message = document.createElement("p");
-message.className = "message";
-loginForm.appendChild(message);
+// ---------- Password Error ----------
 
-// Show Password
+const passwordError = document.createElement("small");
+passwordError.className = "field-error";
+
+passwordWrapper.appendChild(passwordError);
+
+// ---------- Show Password ----------
 
 const toggle = document.createElement("span");
+
 toggle.className = "toggle-password";
 toggle.textContent = "Show";
 
-password.parentNode.appendChild(toggle);
+passwordWrapper.appendChild(toggle);
 
 toggle.addEventListener("click", () => {
 
-    password.type =
-        password.type === "password"
-            ? "text"
-            : "password";
+    if (password.type === "password") {
 
-    toggle.textContent =
-        password.type === "password"
-            ? "Show"
-            : "Hide";
+        password.type = "text";
+        toggle.textContent = "Hide";
+
+    } else {
+
+        password.type = "password";
+        toggle.textContent = "Show";
+
+    }
 
 });
 
-// Login
+// ---------- Login ----------
 
-loginForm.addEventListener("submit",(event)=>{
+loginForm.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
-    message.textContent="";
+    passwordError.textContent = "";
 
-    if(phone.value.trim()===""){
+    if (phone.value.trim() === "") {
 
-        message.textContent="Phone number is required.";
-        message.style.color="red";
+        alert("Phone number is required.");
 
         phone.focus();
 
@@ -52,10 +57,10 @@ loginForm.addEventListener("submit",(event)=>{
 
     }
 
-    if(password.value.length<8){
+    if (password.value.length < 8) {
 
-        message.textContent="Password must be at least 8 characters.";
-        message.style.color="red";
+        passwordError.textContent =
+            "Password must be at least 8 characters.";
 
         password.focus();
 
@@ -63,23 +68,20 @@ loginForm.addEventListener("submit",(event)=>{
 
     }
 
-    button.disabled=true;
+    button.disabled = true;
+    button.textContent = "Signing In...";
 
-    button.textContent="Signing In...";
+    setTimeout(() => {
 
-    setTimeout(()=>{
+        window.location.href = "dashboard.html";
 
-        window.location.href="dashboard.html";
-
-    },1500);
+    }, 1500);
 
 });
 
+// ---------- Background Images ----------
 
-
-// Background Slideshow
-
-const loginImages=[
+const loginImages = [
 
     "../assets/images/un.jpeg",
     "../assets/images/login-image6.jpeg",
@@ -89,38 +91,30 @@ const loginImages=[
 
 ];
 
-const background=document.getElementById("auth-background");
+const background = document.getElementById("auth-background");
 
-let current=0;
+let current = 0;
 
-function changeBackground(){
+function changeBackground() {
 
-    background.style.opacity=0;
+    background.style.opacity = 0;
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
         current++;
 
-        if(current>=loginImages.length){
+        if (current >= loginImages.length) {
 
-            current=0;
+            current = 0;
 
         }
 
-        background.src=loginImages[current];
+        background.src = loginImages[current];
 
-        background.style.opacity=1;
+        background.style.opacity = 1;
 
-        background.style.transform="scale(1.08)";
-
-        setTimeout(()=>{
-
-            background.style.transform="scale(1)";
-
-        },200);
-
-    },400);
+    }, 400);
 
 }
 
-setInterval(changeBackground,4000);
+setInterval(changeBackground, 4000);
