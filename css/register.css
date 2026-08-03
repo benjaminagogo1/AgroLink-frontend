@@ -112,3 +112,61 @@ button:disabled{
     opacity:.7;
     cursor:not-allowed;
 }
+.password-wrapper{
+
+    position:relative;
+
+}
+
+.password-wrapper input{
+
+    width:100%;
+    padding-right:70px;
+
+}
+
+.toggle-password{
+
+    position:absolute;
+
+    right:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:green;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    user-select:none;
+
+}
+
+.password-strength{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-weight:bold;
+
+}
+
+.message{
+
+    margin-top:20px;
+
+    font-weight:bold;
+
+}
+
+button:disabled{
+
+    opacity:.7;
+
+    cursor:not-allowed;
+
+}

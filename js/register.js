@@ -9,37 +9,73 @@ const confirmPassword = document.getElementById("confirm-password");
 
 const button = registerForm.querySelector("button");
 
+
+// -----------------------
 // Message
+// -----------------------
+
 const message = document.createElement("p");
 message.className = "message";
 registerForm.appendChild(message);
 
-// Password strength
+
+// -----------------------
+// Password Strength
+// -----------------------
+
 const strength = document.createElement("small");
 strength.className = "password-strength";
+
 password.parentNode.appendChild(strength);
 
+
+// -----------------------
 // Show Password
+// -----------------------
+
 const togglePassword = document.createElement("span");
 togglePassword.className = "toggle-password";
 togglePassword.textContent = "Show";
+
 password.parentNode.appendChild(togglePassword);
 
+
+// -----------------------
 // Show Confirm Password
+// -----------------------
+
 const toggleConfirm = document.createElement("span");
 toggleConfirm.className = "toggle-password";
 toggleConfirm.textContent = "Show";
+
 confirmPassword.parentNode.appendChild(toggleConfirm);
 
+
+// -----------------------
+// Toggle Password
+// -----------------------
+
 togglePassword.onclick = () => {
+
     password.type =
-        password.type === "password" ? "text" : "password";
+        password.type === "password"
+            ? "text"
+            : "password";
 
     togglePassword.textContent =
-        password.type === "password" ? "Show" : "Hide";
+        password.type === "password"
+            ? "Show"
+            : "Hide";
+
 };
 
+
+// -----------------------
+// Toggle Confirm Password
+// -----------------------
+
 toggleConfirm.onclick = () => {
+
     confirmPassword.type =
         confirmPassword.type === "password"
             ? "text"
@@ -49,28 +85,45 @@ toggleConfirm.onclick = () => {
         confirmPassword.type === "password"
             ? "Show"
             : "Hide";
+
 };
+
+
+// -----------------------
+// Password Strength
+// -----------------------
 
 password.addEventListener("input", () => {
 
     if (password.value.length < 8) {
+
         strength.textContent = "Weak Password";
         strength.style.color = "red";
+
     }
 
     else if (password.value.length < 12) {
+
         strength.textContent = "Medium Password";
         strength.style.color = "orange";
+
     }
 
     else {
+
         strength.textContent = "Strong Password";
         strength.style.color = "green";
+
     }
 
 });
 
-registerForm.addEventListener("submit", function (event) {
+
+// -----------------------
+// Form Validation
+// -----------------------
+
+registerForm.addEventListener("submit", (event) => {
 
     event.preventDefault();
 
@@ -109,6 +162,9 @@ registerForm.addEventListener("submit", function (event) {
 });
 
 
+// -----------------------
+// Background Slideshow
+// -----------------------
 
 const registerImages = [
 
@@ -120,15 +176,15 @@ const registerImages = [
 
 ];
 
-const leftPanel = document.querySelector(".left-side");
+const leftPanel = document.querySelector(".auth-left");
 
 let current = 0;
 
-function changeBackground(){
+function changeBackground() {
 
     current++;
 
-    if(current >= registerImages.length){
+    if (current >= registerImages.length) {
 
         current = 0;
 
@@ -144,4 +200,4 @@ function changeBackground(){
 
 }
 
-setInterval(changeBackground,4000);
+setInterval(changeBackground, 4000);
